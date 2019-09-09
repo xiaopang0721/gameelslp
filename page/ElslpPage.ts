@@ -16,6 +16,10 @@ module gameelslp.page {
 				PathGameTongyong.atlas_game_ui_tongyong + "hud.atlas",
 				PathGameTongyong.atlas_game_ui_tongyong + "dating.atlas",
 				PathGameTongyong.atlas_game_ui_tongyong + "logo.atlas",
+				Path_game_elslp.ui_elslp + "sk/elszp_0.png",
+				Path_game_elslp.ui_elslp + "sk/elszp_1.png",
+				Path_game_elslp.ui_elslp + "sk/elszp_2.png",
+				Path_game_elslp.ui_elslp + "sk/elszp_3.png",
 			];
 			this._isNeedDuang = false;
 		}
