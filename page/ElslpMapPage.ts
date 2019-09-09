@@ -34,7 +34,7 @@ module gameelslp.page {
         "235": [10, 30, 60, 90],  //富豪
     };
     export class ElslpMapPage extends game.gui.base.Page {
-        private _viewUI: ui.game_ui.eluosizhuanpan.ELuoSiLunPanUI;
+        private _viewUI: ui.nqp.game_ui.eluosizhuanpan.ELuoSiLunPanUI;
         private _elslpStory: ElslpStory;
         private _elslpMapInfo: ElslpMapInfo;
         private _lottery: string = "";//中奖区域
@@ -1070,12 +1070,12 @@ module gameelslp.page {
                 let unitIndex = this._unitSeated[i][0];
                 let unit = this._game.sceneObjectMgr.getUnitByIdx(unitIndex);
                 if (unit) {
-                    (this._seatUIList[i] as ui.game_ui.eluosizhuanpan.component.TouXiangWzUI).txt_name.text = getMainPlayerName(unit.GetName());
-                    (this._seatUIList[i] as ui.game_ui.eluosizhuanpan.component.TouXiangWzUI).txt_money.text = EnumToString.getPointBackNum(unit.GetMoney(), 2).toString();
-                    (this._seatUIList[i] as ui.game_ui.eluosizhuanpan.component.TouXiangWzUI).txt_name.fontSize = 15;
+                    (this._seatUIList[i] as ui.nqp.game_ui.eluosizhuanpan.component.TouXiangWzUI).txt_name.text = getMainPlayerName(unit.GetName());
+                    (this._seatUIList[i] as ui.nqp.game_ui.eluosizhuanpan.component.TouXiangWzUI).txt_money.text = EnumToString.getPointBackNum(unit.GetMoney(), 2).toString();
+                    (this._seatUIList[i] as ui.nqp.game_ui.eluosizhuanpan.component.TouXiangWzUI).txt_name.fontSize = 15;
                     let unitHeadImg = unit.GetHeadImg();
                     if (unitHeadImg) {
-                        (this._seatUIList[i] as ui.game_ui.eluosizhuanpan.component.TouXiangWzUI).img_icon.skin = PathGameTongyong.ui_tongyong_touxiang + "head_" + unitHeadImg + ".png";
+                        (this._seatUIList[i] as ui.nqp.game_ui.eluosizhuanpan.component.TouXiangWzUI).img_icon.skin = PathGameTongyong.ui_tongyong_touxiang + "head_" + unitHeadImg + ".png";
                     }
                     this._seatUIList[i].img_txk.visible = unit.GetVipLevel() > 0;
                     if (this._seatUIList[i].img_txk.visible) {
@@ -1094,24 +1094,24 @@ module gameelslp.page {
                                 this._seatUIList[i].img_qifu.visible = true;
                                 if (unit.GetQiFuType()) {
                                     let qifuImgUrl = this._nameStrInfo[unit.GetQiFuType() - 1];
-                                    (this._seatUIList[i] as ui.game_ui.eluosizhuanpan.component.TouXiangWzUI).img_icon.skin = PathGameTongyong.ui_tongyong_touxiang + "head_" + qifuImgUrl + ".png";
+                                    (this._seatUIList[i] as ui.nqp.game_ui.eluosizhuanpan.component.TouXiangWzUI).img_icon.skin = PathGameTongyong.ui_tongyong_touxiang + "head_" + qifuImgUrl + ".png";
                                 }
                             })
                         } else {
                             this._seatUIList[i].img_qifu.visible = true;
                             if (unit.GetQiFuType()) {
                                 let qifuImgUrl = this._nameStrInfo[unit.GetQiFuType() - 1];
-                                (this._seatUIList[i] as ui.game_ui.eluosizhuanpan.component.TouXiangWzUI).img_icon.skin = PathGameTongyong.ui_tongyong_touxiang + "head_" + qifuImgUrl + ".png";
+                                (this._seatUIList[i] as ui.nqp.game_ui.eluosizhuanpan.component.TouXiangWzUI).img_icon.skin = PathGameTongyong.ui_tongyong_touxiang + "head_" + qifuImgUrl + ".png";
                             }
                         }
                     } else {
                         this._seatUIList[i].img_qifu.visible = false;
                     }
                 } else {
-                    (this._seatUIList[i] as ui.game_ui.eluosizhuanpan.component.TouXiangWzUI).txt_name.text = "";
-                    (this._seatUIList[i] as ui.game_ui.eluosizhuanpan.component.TouXiangWzUI).txt_money.text = "点击入座";
-                    (this._seatUIList[i] as ui.game_ui.eluosizhuanpan.component.TouXiangWzUI).txt_name.fontSize = 20;
-                    (this._seatUIList[i] as ui.game_ui.eluosizhuanpan.component.TouXiangWzUI).img_icon.skin = PathGameTongyong.ui_tongyong_general + "tu_weizi.png";
+                    (this._seatUIList[i] as ui.nqp.game_ui.eluosizhuanpan.component.TouXiangWzUI).txt_name.text = "";
+                    (this._seatUIList[i] as ui.nqp.game_ui.eluosizhuanpan.component.TouXiangWzUI).txt_money.text = "点击入座";
+                    (this._seatUIList[i] as ui.nqp.game_ui.eluosizhuanpan.component.TouXiangWzUI).txt_name.fontSize = 20;
+                    (this._seatUIList[i] as ui.nqp.game_ui.eluosizhuanpan.component.TouXiangWzUI).img_icon.skin = PathGameTongyong.ui_tongyong_general + "tu_weizi.png";
                     this._seatUIList[i].img_qifu.visible = false;
                     this._seatUIList[i].qifu_type.visible = false;
                     this._seatUIList[i].img_txk.visible = false;
@@ -1306,7 +1306,7 @@ module gameelslp.page {
     const NUMBER_SKIN: string[] = ["zs_lv", "zs_fen", "zs_hui", "zs_fen", "zs_hui", "zs_fen", "zs_hui", "zs_fen", "zs_hui", "zs_fen", "zs_hui",
         "zs_hui", "zs_fen", "zs_hui", "zs_fen", "zs_hui", "zs_fen", "zs_hui", "zs_fen", "zs_fen", "zs_hui", "zs_fen", "zs_hui", "zs_fen", "zs_hui", "zs_fen",
         "zs_hui", "zs_fen", "zs_hui", "zs_hui", "zs_fen", "zs_hui", "zs_fen", "zs_hui", "zs_fen", "zs_hui", "zs_fen"];
-    class MapRecordRender extends ui.game_ui.eluosizhuanpan.component.AnNiu1UI {
+    class MapRecordRender extends ui.nqp.game_ui.eluosizhuanpan.component.AnNiu1UI {
         private _game: Game;
         private _data: any;
 

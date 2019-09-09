@@ -3,7 +3,7 @@
 */
 module gameelslp.page {
 	export class ElslpPage extends game.gui.base.Page {
-		private _viewUI: ui.game_ui.eluosizhuanpan.ELuoSiZguabPan_HUDUI;
+		private _viewUI: ui.nqp.game_ui.eluosizhuanpan.ELuoSiZguabPan_HUDUI;
 		private _player: any;
 		private _leastTmep: any = [5000, 8000, 25000, 50000];
 

@@ -7,7 +7,7 @@ module gameelslp.page {
 		TYPE_BEISHU = 1,
 	}
 	export class ElslpRulePage extends game.gui.base.Page {
-		private _viewUI: ui.game_ui.eluosizhuanpan.GuiZeUI;
+		private _viewUI: ui.nqp.game_ui.eluosizhuanpan.GuiZeUI;
 
 		constructor(v: Game, onOpenFunc?: Function, onCloseFunc?: Function) {
 			super(v, onOpenFunc, onCloseFunc);

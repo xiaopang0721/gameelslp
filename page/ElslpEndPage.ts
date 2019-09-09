@@ -3,7 +3,7 @@
 */
 module gameelslp.page{
 	export class ElslpEndPage extends game.gui.base.Page {
-		private _viewUI: ui.game_ui.eluosizhuanpan.StopUI;
+		private _viewUI: ui.nqp.game_ui.eluosizhuanpan.StopUI;
 		
 		constructor(v: Game, onOpenFunc?: Function, onCloseFunc?: Function) {
 			super(v, onOpenFunc, onCloseFunc);

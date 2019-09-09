@@ -5,7 +5,7 @@ module gameelslp.page {
 	const HONG_NUMBER = [1, 3, 5, 7, 9, 12, 14, 16, 18, 19, 21, 23, 25, 27, 30, 32, 34, 36];	//红的数字
 	const HEI_NUMBER = [2, 4, 6, 8, 10, 11, 13, 15, 17, 20, 22, 24, 26, 28, 29, 31, 33, 35];	//黑的数字
 	export class ElslpRoadPage extends game.gui.base.Page {
-		private _viewUI: ui.game_ui.eluosizhuanpan.ZouShiTuUI;
+		private _viewUI: ui.nqp.game_ui.eluosizhuanpan.ZouShiTuUI;
 		private _isShenQing: boolean = false;
 		private _mapinfo: ElslpMapInfo;
 
@@ -122,7 +122,7 @@ module gameelslp.page {
 	const NUMBER_SKIN: string[] = ["zs_lv", "zs_fen", "zs_hui", "zs_fen", "zs_hui", "zs_fen", "zs_hui", "zs_fen", "zs_hui", "zs_fen", "zs_hui",
 		"zs_hui", "zs_fen", "zs_hui", "zs_fen", "zs_hui", "zs_fen", "zs_hui", "zs_fen", "zs_fen", "zs_hui", "zs_fen", "zs_hui", "zs_fen", "zs_hui", "zs_fen",
 		"zs_hui", "zs_fen", "zs_hui", "zs_hui", "zs_fen", "zs_hui", "zs_fen", "zs_hui", "zs_fen", "zs_hui", "zs_fen"];
-	class MapRecordRender extends ui.game_ui.eluosizhuanpan.component.AnNiu1UI {
+	class MapRecordRender extends ui.nqp.game_ui.eluosizhuanpan.component.AnNiu1UI {
 		private _game: Game;
 		private _data: any;
 
