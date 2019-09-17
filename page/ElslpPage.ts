@@ -3,7 +3,7 @@
 */
 module gameelslp.page {
 	export class ElslpPage extends game.gui.base.Page {
-		private _viewUI: ui.game_ui.eluosizhuanpan.ELuoSiZguabPan_HUDUI;
+		private _viewUI: ui.nqp.game_ui.eluosizhuanpan.ELuoSiZguabPan_HUDUI;
 		private _player: any;
 		private _leastTmep: any = [5000, 8000, 25000, 50000];
 
@@ -16,6 +16,10 @@ module gameelslp.page {
 				PathGameTongyong.atlas_game_ui_tongyong + "hud.atlas",
 				PathGameTongyong.atlas_game_ui_tongyong + "dating.atlas",
 				PathGameTongyong.atlas_game_ui_tongyong + "logo.atlas",
+				Path_game_elslp.ui_elslp + "sk/elszp_0.png",
+				Path_game_elslp.ui_elslp + "sk/elszp_1.png",
+				Path_game_elslp.ui_elslp + "sk/elszp_2.png",
+				Path_game_elslp.ui_elslp + "sk/elszp_3.png",
 			];
 			this._isNeedDuang = false;
 		}
@@ -36,7 +40,7 @@ module gameelslp.page {
 			super.onOpen();
 
 			this.initPlayerInfo();
-			(this._viewUI.view_hud as TongyongHudPage).onOpen(this._game, ElslpPageDef.GAME_NAME);
+			(this._viewUI.view_hud as TongyongHudNqpPage).onOpen(this._game, ElslpPageDef.GAME_NAME);
 			for (let index = 0; index < this._viewUI.box_right.numChildren; index++) {
 				this._viewUI.box_right._childs[index].visible = true;
 				Laya.Tween.from(this._viewUI.box_right._childs[index], {
@@ -75,7 +79,7 @@ module gameelslp.page {
 			TongyongPageDef.ins.alertRecharge(StringU.substitute("老板，您的金币少于{0}哦~\n补充点金币去大杀四方吧~", limit), () => {
 				this._game.uiRoot.general.open(DatingPageDef.PAGE_CHONGZHI);
 			}, () => {
-			}, false, PathGameTongyong.ui_tongyong_general + "btn_cz.png");
+			}, true, TongyongPageDef.TIPS_SKIN_STR['cz']);
 		}
 
 		private initPlayerInfo(): void {

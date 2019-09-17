@@ -51,6 +51,15 @@ module gameelslp.page {
 				Path_game_elslp.ui_elslp + "bg_1.png",
 				Path_game_elslp.ui_elslp + "guize_1.png",
 				Path_game_elslp.ui_elslp + "guize_2.png",
+				Path_game_elslp.ui_elslp + "sk/elszp_0.png",
+				Path_game_elslp.ui_elslp + "sk/elszp_0.sk",
+				Path_game_elslp.ui_elslp + "sk/elszp_1.png",
+				Path_game_elslp.ui_elslp + "sk/elszp_1.sk",
+				Path_game_elslp.ui_elslp + "sk/elszp_2.png",
+				Path_game_elslp.ui_elslp + "sk/elszp_2.sk",
+				Path_game_elslp.ui_elslp + "sk/elszp_3.png",
+				Path_game_elslp.ui_elslp + "sk/elszp_3.sk",
+
 				Path.map + 'pz_elslp.png',
 				Path.map_far + 'bg_elslp.jpg'
 			]

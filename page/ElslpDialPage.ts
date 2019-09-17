@@ -11,7 +11,7 @@ module gameelslp.page {
     const NUMBER_POS: number[] = [0, 32, 15, 19, 4, 21, 2, 25, 17, 34, 6, 27, 13, 36, 11, 30, 8, 23, 10, 5, 24, 16, 33, 1,
         20, 14, 31, 9, 22, 18, 29, 7, 28, 12, 35, 3, 26];    //0-37数字的位置(index就是该数字位置)
     export class ElslpDialPage extends game.gui.base.Page {
-        private _viewUI: ui.game_ui.eluosizhuanpan.ZhuanPanUI;
+        private _viewUI: ui.nqp.game_ui.eluosizhuanpan.ZhuanPanUI;
         private _subVal: number = 0;    //转盘递减的角度值
         private _ballSubVal: number = 0;//小球递减角度
         private _ballAngle: number = 0; //球的角度
