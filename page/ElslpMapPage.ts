@@ -83,7 +83,7 @@ module gameelslp.page {
                 PathGameTongyong.atlas_game_ui_tongyong + "touxiang.atlas",
                 Path_game_elslp.atlas_game_ui + "eluosizhuanpan.atlas",
                 PathGameTongyong.atlas_game_ui_tongyong + "tuichu.atlas",
-                PathGameTongyong.atlas_game_ui_tongyong + "qifu.atlas",
+                DatingPath.atlas_dating_ui + "qifu.atlas",
             ];
         }
 
