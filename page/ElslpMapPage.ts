@@ -791,7 +791,6 @@ module gameelslp.page {
 
         //重复下注
         private repeatBet(): void {
-            if (this.showIsGuest()) return;
             if (this._betWait) return;//投注间隔
             let betArr = [];
             let total = 0;
@@ -869,7 +868,6 @@ module gameelslp.page {
         //区域下注
         private _betWait: boolean = false;
         private onAreaBetClick(index: number, e: LEvent): void {
-            if (this.showIsGuest()) return;
             if (this._curStatus != MAP_STATUS.PLAY_STATUS_BET) {
                 this._game.uiRoot.topUnder.showTips("当前不在下注时间，请在下注时间再进行下注！");
                 return;
@@ -966,7 +964,6 @@ module gameelslp.page {
 
         //选择座位入座
         private onSelectSeat(index: number): void {
-            if (this.showIsGuest()) return;
             let mainUnit = this._game.sceneObjectMgr.mainUnit;
             if (!mainUnit) return;
 
@@ -998,15 +995,6 @@ module gameelslp.page {
                     }));
                 }
             }
-        }
-
-        private showIsGuest(): boolean {
-            if (this._game.sceneObjectMgr.mainPlayer.IsIsGuest()) {
-                TongyongPageDef.ins.alertRecharge("您选择了游客模式登录游戏，由于该模式下的游戏数据(包括付费数据)在删除游戏、更换设备后将被清空！对此造成的损失，本平台将不承担任何责任。为了您的虚拟财产安全，我们强烈建议您先绑定手机！",
-                    () => { }, () => { }, true, TongyongPageDef.TIPS_SKIN_STR['qd']);
-                return true;
-            }
-            return false;
         }
 
         private resetAll(): void {
