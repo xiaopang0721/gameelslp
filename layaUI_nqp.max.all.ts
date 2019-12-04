@@ -302,17 +302,17 @@ module ui.nqp.game_ui.eluosizhuanpan {
 
 module ui.nqp.game_ui.eluosizhuanpan {
     export class ELuoSiZguabPan_HUDUI extends View {
-		public view_hud:ui.nqp.game_ui.tongyong.HudUI;
+		public view_hud:ui.ajqp.game_ui.tongyong.HudUI;
 		public box_right:Laya.Box;
 		public img_room0:Laya.Box;
 		public img_room1:Laya.Box;
 		public img_room2:Laya.Box;
 		public img_room3:Laya.Box;
 
-        public static  uiView:any ={"type":"View","props":{"y":0,"width":1280,"height":720},"child":[{"type":"Image","props":{"top":-1,"skin":"elslp_ui/game_ui/eluosizhuanpan/bg_2.jpg","right":-1,"left":-1,"bottom":-1}},{"type":"Hud","props":{"var":"view_hud","runtime":"ui.nqp.game_ui.tongyong.HudUI","centerY":0,"centerX":0}},{"type":"Box","props":{"width":1274,"var":"box_right","right":2,"height":465,"centerY":3,"anchorY":0.5,"anchorX":0.5},"child":[{"type":"Box","props":{"y":60,"width":315,"var":"img_room0","right":957,"height":330},"child":[{"type":"SkeletonPlayer","props":{"y":165,"x":160,"url":"elslp_ui/game_ui/eluosizhuanpan/sk/elszp_0.sk"}}]},{"type":"Box","props":{"y":65,"width":315,"var":"img_room1","right":637,"height":325},"child":[{"type":"SkeletonPlayer","props":{"y":159,"x":155,"url":"elslp_ui/game_ui/eluosizhuanpan/sk/elszp_1.sk"}}]},{"type":"Box","props":{"y":59,"width":315,"var":"img_room2","right":320,"height":331},"child":[{"type":"SkeletonPlayer","props":{"y":165,"x":164,"url":"elslp_ui/game_ui/eluosizhuanpan/sk/elszp_2.sk"}}]},{"type":"Box","props":{"y":60,"width":310,"var":"img_room3","right":-3,"height":330},"child":[{"type":"SkeletonPlayer","props":{"y":166,"x":153,"url":"elslp_ui/game_ui/eluosizhuanpan/sk/elszp_3.sk"}}]}]},{"type":"Image","props":{"top":12,"skin":"elslp_ui/game_ui/eluosizhuanpan/brnn_title.png","scaleY":1,"scaleX":1,"centerX":158,"anchorY":0.5,"anchorX":0.5}},{"type":"Button","props":{"y":668,"x":640,"stateNum":1,"skin":"tongyong_ui/game_ui/tongyong/dating/btn_ksjr.png","centerX":0,"bottom":10,"anchorY":0.5,"anchorX":0.5}}]};
+        public static  uiView:any ={"type":"View","props":{"y":0,"width":1280,"height":720},"child":[{"type":"Image","props":{"top":-1,"skin":"elslp_ui/game_ui/eluosizhuanpan/bg_2.jpg","right":-1,"left":-1,"bottom":-1}},{"type":"Hud","props":{"var":"view_hud","runtime":"ui.ajqp.game_ui.tongyong.HudUI","centerY":0,"centerX":0}},{"type":"Box","props":{"width":1274,"var":"box_right","right":2,"height":465,"centerY":3,"anchorY":0.5,"anchorX":0.5},"child":[{"type":"Box","props":{"y":60,"width":315,"var":"img_room0","right":957,"height":330},"child":[{"type":"SkeletonPlayer","props":{"y":165,"x":160,"url":"elslp_ui/game_ui/eluosizhuanpan/sk/elszp_0.sk"}}]},{"type":"Box","props":{"y":65,"width":315,"var":"img_room1","right":637,"height":325},"child":[{"type":"SkeletonPlayer","props":{"y":159,"x":155,"url":"elslp_ui/game_ui/eluosizhuanpan/sk/elszp_1.sk"}}]},{"type":"Box","props":{"y":59,"width":315,"var":"img_room2","right":320,"height":331},"child":[{"type":"SkeletonPlayer","props":{"y":165,"x":164,"url":"elslp_ui/game_ui/eluosizhuanpan/sk/elszp_2.sk"}}]},{"type":"Box","props":{"y":60,"width":310,"var":"img_room3","right":-3,"height":330},"child":[{"type":"SkeletonPlayer","props":{"y":166,"x":153,"url":"elslp_ui/game_ui/eluosizhuanpan/sk/elszp_3.sk"}}]}]},{"type":"Image","props":{"top":12,"skin":"elslp_ui/game_ui/eluosizhuanpan/brnn_title.png","scaleY":1,"scaleX":1,"centerX":158,"anchorY":0.5,"anchorX":0.5}},{"type":"Button","props":{"y":668,"x":640,"stateNum":1,"skin":"tongyong_ui/game_ui/tongyong/dating/btn_ksjr.png","centerX":0,"bottom":10,"anchorY":0.5,"anchorX":0.5}}]};
         constructor(){ super()}
         createChildren():void {
-        			View.regComponent("ui.nqp.game_ui.tongyong.HudUI",ui.nqp.game_ui.tongyong.HudUI);
+        			View.regComponent("ui.ajqp.game_ui.tongyong.HudUI",ui.ajqp.game_ui.tongyong.HudUI);
 			View.regComponent("SkeletonPlayer",laya.ani.bone.Skeleton);
 
             super.createChildren();
