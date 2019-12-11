@@ -82,7 +82,6 @@ module gameelslp.page {
                 PathGameTongyong.atlas_game_ui_tongyong + "general.atlas",
                 PathGameTongyong.atlas_game_ui_tongyong + "touxiang.atlas",
                 Path_game_elslp.atlas_game_ui + "eluosizhuanpan.atlas",
-                PathGameTongyong.atlas_game_ui_tongyong + "tuichu.atlas",
                 DatingPath.atlas_dating_ui + "qifu.atlas",
             ];
         }
@@ -677,6 +676,9 @@ module gameelslp.page {
                     }
                     break;
                 case MAP_STATUS.PLAY_STATUS_STOP_BET:// 停止下注阶段
+                    for (let i: number = 0; i < this._areaKuangUIList.length; i++) {
+                        this._areaKuangUIList[i].visible = false;
+                    }
                     this._pageHandle.pushClose({ id: ElslpPageDef.PAGE_ELSLP_BEGIN, parent: this._game.uiRoot.HUD });
                     this._pageHandle.pushOpen({ id: ElslpPageDef.PAGE_ELSLP_END, parent: this._game.uiRoot.HUD });
                     this._game.playSound(Path_game_elslp.music_elslp + "dingding_end.mp3");
@@ -859,8 +861,9 @@ module gameelslp.page {
                     }
                 }
             }
+            this.moveHead(this._viewUI.main_player, this._mainHeadPos[0][0], this._mainHeadPos[0][1], this._mainHeadPos[1][0], this._mainHeadPos[1][1]);
             this._betWait = true;
-            Laya.timer.once(500, this, () => {
+            Laya.timer.once(100, this, () => {
                 this._betWait = false;
             })
         }
@@ -931,7 +934,7 @@ module gameelslp.page {
                 return;
             }
             this._betWait = true;
-            Laya.timer.once(500, this, () => {
+            Laya.timer.once(100, this, () => {
                 this._betWait = false;
             })
             this._rebetList[index] += this._curChip;
@@ -1164,6 +1167,9 @@ module gameelslp.page {
                 this._seatUIList.push(this._viewUI["seat" + i]);
                 this._seatUIList[i].clip_money.visible = false;
                 this._seatUIList[i].on(LEvent.CLICK, this, this.onSelectSeat, [i]);
+                this._seatUIList[i].effWin.visible = false;
+                this._seatUIList[i].img_qifu.visible = false;
+                this._seatUIList[i].img_vip.visible = false;
             }
             this._viewUI.list_record.itemRender = this.createChildren("game_ui.eluosizhuanpan.component.AnNiu1UI", MapRecordRender);
             this._viewUI.list_record.renderHandler = new Handler(this, this.renderHandler);
