@@ -78,11 +78,12 @@ module gameelslp.page {
             this._isNeedDuang = false;
             this._delta = 1000;
             this._asset = [
+                DatingPath.atlas_dating_ui + "qifu.atlas",
                 PathGameTongyong.atlas_game_ui_tongyong + "hud.atlas",
                 PathGameTongyong.atlas_game_ui_tongyong + "general.atlas",
                 PathGameTongyong.atlas_game_ui_tongyong + "touxiang.atlas",
                 Path_game_elslp.atlas_game_ui + "eluosizhuanpan.atlas",
-                DatingPath.atlas_dating_ui + "qifu.atlas",
+                PathGameTongyong.atlas_game_ui_tongyong + "qifu.atlas",
             ];
         }
 
@@ -547,8 +548,8 @@ module gameelslp.page {
                     Laya.timer.once(800, this, () => {
                         this._game.playSound(Path_game_elslp.music_elslp + "piaoqian.mp3", false);
                         for (let j = 0; j < 20; j++) {
-                            let ranType = MathU.randomRange(1, 5);
-                            let ranVal = this._chipArr[ranType - 1];
+                            let ranType = MathU.randomRange(0, 4);
+                            let ranVal = this._chipArr[ranType];
                             this._chipSortScore++;
                             this.bankerFlyChip(2, i + 1, ranType, ranVal, this._chipSortScore, -1);
                         }

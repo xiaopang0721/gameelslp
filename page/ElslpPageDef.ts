@@ -35,6 +35,7 @@ module gameelslp.page {
 			PageDef._pageClassMap[ElslpPageDef.PAGE_ELSLP_ROAD] = ElslpRoadPage;
 
 			this["__needLoadAsset"] = [
+				DatingPath.atlas_dating_ui + "qifu.atlas",
 				PathGameTongyong.atlas_game_ui_tongyong + "hud.atlas",
 				PathGameTongyong.atlas_game_ui_tongyong + "pai.atlas",
 				PathGameTongyong.atlas_game_ui_tongyong + "logo.atlas",
@@ -42,7 +43,7 @@ module gameelslp.page {
 				PathGameTongyong.atlas_game_ui_tongyong + "general.atlas",
 				PathGameTongyong.atlas_game_ui_tongyong + "touxiang.atlas",
 				Path_game_elslp.atlas_game_ui + "eluosizhuanpan.atlas",
-				DatingPath.atlas_dating_ui + "qifu.atlas",
+				PathGameTongyong.atlas_game_ui_tongyong + "qifu.atlas",
 				PathGameTongyong.atlas_game_ui_tongyong + "general/effect/suiji.atlas",
 				PathGameTongyong.atlas_game_ui_tongyong + "general/effect/kaipai.atlas",
 				Path.custom_atlas_scene + 'chip.atlas',
