@@ -85,7 +85,7 @@ module gameelslp.page {
 		private initPlayerInfo(): void {
 			// for (let index = 0; index < 4; index++) {
 			// 	this._viewUI["lab_least" + index].text = "限红: " + this._leastTmep[index];
-				// this._viewUI["lab_money" + index].text = "准入: " + this._needMoney[index];
+			// this._viewUI["lab_money" + index].text = "准入: " + this._needMoney[index];
 			// }
 		}
 
@@ -98,9 +98,9 @@ module gameelslp.page {
 				for (let index = 0; index < this._viewUI.box_right.numChildren; index++) {
 					Laya.timer.clearAll(this._viewUI.box_right._childs[index]);
 				}
+				this._player = null;
+				this._game.stopMusic();
 			}
-			this._player = null;
-			this._game.stopMusic();
 
 			super.close();
 		}
