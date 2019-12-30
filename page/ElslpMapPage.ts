@@ -738,7 +738,7 @@ module gameelslp.page {
         //点击事件
         protected onClickHandle(e: LEvent): void {
             //玩家列表
-            this._game.uiRoot.general.open(ElslpPageDef.PAGE_ELSLP_PLAYER_LIST);
+            this._game.uiRoot.general.open(TongyongPageDef.PAGE_TONGYONG_PLAYER_LIST);
         }
 
         //按钮缓动回调

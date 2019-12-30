@@ -12,8 +12,6 @@ module gameelslp.page {
 		static PAGE_ELSLP_BEGIN: string = "3";
 		//俄罗斯轮盘游戏规则界面
 		static PAGE_ELSLP_RULE: string = "101";
-		//俄罗斯轮盘玩家列表界面
-		static PAGE_ELSLP_PLAYER_LIST: string = "10";
 		//俄罗斯轮盘停止下注界面
 		static PAGE_ELSLP_END: string = "11";
 		//俄罗斯轮盘转盘
@@ -29,7 +27,6 @@ module gameelslp.page {
 			PageDef._pageClassMap[ElslpPageDef.PAGE_ELSLP_MAP] = ElslpMapPage;
 			PageDef._pageClassMap[ElslpPageDef.PAGE_ELSLP_BEGIN] = ElslpBeginPage;
 			PageDef._pageClassMap[ElslpPageDef.PAGE_ELSLP_RULE] = ElslpRulePage;
-			PageDef._pageClassMap[ElslpPageDef.PAGE_ELSLP_PLAYER_LIST] = ElslpPlayerListPage;
 			PageDef._pageClassMap[ElslpPageDef.PAGE_ELSLP_END] = ElslpEndPage;
 			PageDef._pageClassMap[ElslpPageDef.PAGE_ELSLP_DIAL] = ElslpDialPage;
 			PageDef._pageClassMap[ElslpPageDef.PAGE_ELSLP_ROAD] = ElslpRoadPage;
