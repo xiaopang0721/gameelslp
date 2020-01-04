@@ -41,7 +41,6 @@ module gameelslp.page {
 				PathGameTongyong.atlas_game_ui_tongyong + "touxiang.atlas",
 				Path_game_elslp.atlas_game_ui + "eluosizhuanpan.atlas",
 				PathGameTongyong.atlas_game_ui_tongyong + "qifu.atlas",
-				PathGameTongyong.atlas_game_ui_tongyong + "general/effect/suiji.atlas",
 				PathGameTongyong.atlas_game_ui_tongyong + "general/effect/kaipai.atlas",
 				Path.custom_atlas_scene + 'chip.atlas',
 
