@@ -78,11 +78,10 @@ module gameelslp.page {
             this._isNeedDuang = false;
             this._delta = 1000;
             this._asset = [
-                DatingPath.atlas_dating_ui + "qifu.atlas",
+                Path_game_elslp.atlas_game_ui + "eluosizhuanpan.atlas",
                 PathGameTongyong.atlas_game_ui_tongyong + "hud.atlas",
                 PathGameTongyong.atlas_game_ui_tongyong + "general.atlas",
                 PathGameTongyong.atlas_game_ui_tongyong + "touxiang.atlas",
-                Path_game_elslp.atlas_game_ui + "eluosizhuanpan.atlas",
                 PathGameTongyong.atlas_game_ui_tongyong + "qifu.atlas",
             ];
         }
@@ -779,7 +778,6 @@ module gameelslp.page {
                         this._game.showTips("游戏尚未结束，请先打完这局哦~");
                         return;
                     }
-                    TongyongPageDef.ins.alertClose("toubao", this, this.onClickCancle);
 
                     break;
                 default:
